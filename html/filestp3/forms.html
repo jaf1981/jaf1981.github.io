@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <title>Clases</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../tp3.html">Home</a>
+            <a href="about.html">Acerca de mí</a>
+            <a href="contact.html">Contacto</a>
+            <a href="forms.html">Registrese</a>
+            <a href="otrosvideos.html">Otros Videos Recomendados</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Formulario de Registro</h2>
+        <form action="show_data.html" target="_blank">
+            <label for="firstname">Nombre:</label><input type="text" name="firstname" placeholder="Ingrese su nombre aqui..."><br><br>
+            <label for="lastname">Apellido: </label><input type="text" name="lastname" placeholder="Ingrese su apellido aqui..."><br><br>
+            <label for="street">Direccion: </label><input type="text" name="street" placeholder="Ingrese su dirección aqui..."><br><br>
+            <label for="city">Ciudad: </label><input type="text" name="city" value="C.A.B.A."><br><br>
+            <label for="zipcode">Código Postal: </label><input type="text" name="zipcode" placeholder="Ingrese su código postal aqui..."><br><br>
+            <label for="BirthDate">Fecha de Nacimiento (mm/dd/yyyy): </label><input type="text" name="BirthDate"><br><br>
+            <p> Género:
+                <input type="radio" name="gender" value="hombre" checked>Hombre
+                <input type="radio" name="gender" value="mujer">Mujer
+                <input type="radio" name="gender" value="otro">Otro
+            </p>
+            <p> Estudios:
+                <input type="checkbox" name="estudio" value="primarios"> Primarios
+                <input type="checkbox" name="estudio" value="secundarios"> Secundarios
+                <input type="checkbox" name="estudio" value="terciarios"> Terciarios
+                <input type="checkbox" name="estudio" value="universitarios"> Universitarios
+                <input type="checkbox" name="estudio" value="otros"> Otros
+            </p>
+            <input type="submit" value="Enviar">
+        </form>
+        <p>Si usted hace click en el botón "Enviar", la información será enviada a la página "show_data.html".</p>
+
+    </main>
+    <footer>
+        <br>
+        <br>
+        <a href="https://twitter.com/?lang=es"><i class="fab fa-twitter"></i></a>
+        <a href="https://es-la.facebook.com/"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+        <br>
+        <p>Derechos Reservados 2020</p>
+        <p><strong>Te esperamos si deseas acercarte a nuestras oficinas</strong></p>
+        <br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.2008237440696!2d-58.371882684813926!3d-34.599082980460636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a3353362882a0f%3A0xd0c2b7f66748b42b!2sEdificio%20Bouchard%20710%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1598894371183!5m2!1ses-419!2sar" width="300" height="auto" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <br>
+    </footer>
+</body>
+</html>
