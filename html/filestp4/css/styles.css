@@ -76,6 +76,7 @@ footer {
 
 footer>a>i {
     font-size: 50px;
+    color: red;
 }
 
 form {
