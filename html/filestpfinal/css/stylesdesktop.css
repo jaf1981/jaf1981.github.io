@@ -1,5 +1,5 @@
 /* Versión Desktop */
-@media (min-width: 1200px) {
+@media (min-width: 1200px), (min-width: 640px) and (max-width: 1200px) and (orientation: landscape) {
 
     body {
         font-family: Roboto, 'Trebuchet MS', sans-serif;

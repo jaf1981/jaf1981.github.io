@@ -1,5 +1,5 @@
 /* Versión Mobile Phones */
-@media (max-width: 640px) {
+@media (max-width: 640px) and (orientation: portrait) {
 
     body {
         font-family: Roboto, 'Trebuchet MS', sans-serif;
