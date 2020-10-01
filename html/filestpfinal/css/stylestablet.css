@@ -1,5 +1,5 @@
 /* Versión Tablet */
-@media (max-width: 640px) and (orientation: portrait), (min-width: 640px) and (max-width: 1200px) and (orientation: portrait) {
+@media (max-width: 640px) and (orientation: portrait), (min-width: 640px) and (max-width: 1200px) and (orientation: landscape) {
     body {
         font-family: Roboto, 'Trebuchet MS', sans-serif;
         margin: 0;
