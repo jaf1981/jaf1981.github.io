@@ -1,0 +1,159 @@
+/* Versión Mobile Phones */
+@media (max-width: 640px) {
+
+    body {
+        font-family: Roboto, 'Trebuchet MS', sans-serif;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-rows: 10% max-content 25%;
+    }
+    
+    
+    #text_header {
+        margin: 0;
+        padding: 0;
+        font-size: 2em;
+        font-weight: 700;
+        text-align: center;
+        animation-duration: 2s;
+        animation-name: slidein;        
+    }
+
+    .encabezado {
+        margin: 0;
+        background-color: rgb(207, 90, 90);
+        grid-row: 1/2;
+    }
+    
+    .pie {
+        background-color: rgb(250, 169, 169);
+        font-size: 1em;
+        font-weight: 500;
+        text-align: center;
+        display: grid;
+        grid-row: 3/4;
+        grid-template-rows: auto auto;
+        padding: 0;
+    }
+
+    .pie-col-1, .pie-col-2 {
+        padding: 0;
+        margin: 0;
+    }
+
+    
+    #nroclase {
+        padding: 1em;
+        width: 80%;
+        height: 70%;
+    }
+
+
+    .container {
+        margin: 0;
+        display:grid;
+        grid-template-rows: 1fr auto auto auto;
+        grid-gap: 0px;
+        align-items: stretch;
+        text-align: center;
+    }
+    
+    .row-1 {
+        background-color: rgb(207, 90, 90);
+        width: 100%;
+        grid-column: 1/4;
+        grid-row: 1/2;
+        justify-items: center;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-top: 1.5px solid maroon;
+        border-bottom: 1.5px solid maroon;        
+    }
+
+    .row-1 a {
+        margin: 0.5rem;
+        padding: 0.2rem;
+        border-radius: 50%;
+        background-color: rgb(252, 222, 222);
+        color: rgb(87, 17, 17);  
+        box-shadow: 00.1rem 0rem 0.1rem;
+        font-family: 'Trebuchet MS', sans-serif;
+        text-decoration: none;
+    }    
+    
+    .row-2 {
+        grid-row: 2/3;
+        grid-column: 1/4;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: min-content max-content auto;
+        gap: 0 0;
+    }
+    
+    .col-1 {
+        grid-column: 1/1;
+        grid-row: 1/2;
+        background-color: rgb(153, 2, 2);
+        color: papayawhip;
+        padding-bottom: 0.2rem;        
+    }
+
+    .col-1 select {
+        margin-top: 0.5rem;
+        font-size: 1em;
+    }
+    
+    .col-2 {
+        grid-column: 1/1;
+        grid-row: 2/3;
+        background-color: rgb(235, 70, 161);
+    }
+    
+    .col-3 {
+        grid-column: 1/1;
+        grid-row: 3/4;
+        background-color: rgb(216, 164, 184);
+        padding-bottom: 2rem;
+    }
+
+    .col-3 a {
+        font-family: fantasy, sans-serif;
+        font-weight: 350;
+        background-color: rgb(216, 164, 184);
+    }  
+    
+    .col-2 p, .col-3 p {
+        padding: 0.25rem;
+        text-align: justify;
+    }
+ 
+    @keyframes slidein {
+        from {
+            margin-left: 100%;
+            width: 300%; 
+          }
+        
+          50% {
+            font-size: 500%;
+            color: red;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            margin-left: 50%;
+            width: 200%;
+          }
+
+          75% {
+            font-size: 300%;
+            color: red;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;              
+            margin-left: 25%;
+            width: 150%;
+          }
+
+          to {
+            margin-left: 0%;
+            width: 100%;
+          }
+    }    
+
+}

@@ -3,96 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-    <link rel="stylesheet" href="filestpfinal/css/styles.css">
-    <title>Clases</title>
+    <link rel="stylesheet" href="filestpfinal/css/stylesdesktop.css">
+    <link rel="stylesheet" href="filestpfinal/css/stylestablet.css">
+    <link rel="stylesheet" href="filestpfinal/css/stylesmobile.css">
+    <script src="filestpfinal/js/main.js"></script>
+    <title>TP Final</title>
 </head>
 <body>
-    <header>
-        <nav>
+    <header class="encabezado">
+        <div style="border: 1px solid yellowgreen; display:inline"><p id="text_header">Aprendiendo a Programar</p></div>
+    </header>
+    <main class="container">
+        <nav class="row-1">
             <a href="tpfinal.html">Home</a>
             <a href="filestpfinal/about.html">Nosotros</a>
             <a href="filestpfinal/contact.html">Contacto</a>
             <a href="filestpfinal/otrosvideos.html">Otros Videos Recomendados</a>
             <a href="filestpfinal/temas.html">Lo que aprenderás</a>
-            <a href="filestpfinal/forms.html">Registrese</a>
+            <a href="filestpfinal/forms.html">Registrese</a>            
         </nav>
-    </header>
-    <main>
-        <h1>Curso Desarrollo Web Full Stack con JS y Python</h1>
-        <img src="filestpfinal/images/home.png" alt="imagen curso" width="900">
-        <br>
-        <ul>
-            <p>Se recomienda comenzar la ruta de aprendizaje con:</p>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JAVASCRIPT</li>
-        </ul>
-        <br>
-        <p>Contenidos: </p>
-        <table>
-            <thead>
-                <tr>
-                    <th>Clase</th>
-                    <th>Link</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <p>Clase 1</p>
-                    </td>
-                    <td>
-                        <a href="https://www.youtube.com/watch?v=bJXkFF9MkIU" target="_blank">Click aquí</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>Clase 2</p>
-                    </td>
-                    <td>
-                        <a href="https://www.youtube.com/watch?v=DmYwmcz_oI4" target="_blank">Click aquí</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>Clase 3</p>
-                    </td>
-                    <td>
-                        <a href="https://www.youtube.com/watch?v=dh73a2W0YzE" target="_blank">Click aquí</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>Clase 4</p>
-                    </td>
-                    <td>
-                        <a href="https://www.youtube.com/watch?v=eWe5k8HKFJo" target="_blank">Click aquí</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>Clase 5</p>
-                    </td>
-                    <td>
-                        <a href="https://www.youtube.com/watch?v=OgagNk6-aAQ" target="_blank">Click aquí</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="row-2">
+            <aside class="col-1">
+                <label style="font-size: larger; font-weight: 700;" for="clases">Elige la clase:</label>
+                <select id="clase_elegida" name="clases" onchange="elegir_clase2()">
+                    <option value="1">Clase 1</option>
+                    <option value="2">Clase 2</option>
+                    <option value="3">Clase 3</option>
+                    <option value="4">Clase 4</option>
+                    <option value="5">Clase 5</option>
+                    <option value="6">Clase 6</option>
+                    <option value="7">Clase 7</option>
+                    <option value="8">Clase 8</option>
+                    <option value="9">Clase 9</option>
+                    <option value="10">Clase 10</option>
+                    <option value="11">Clase 11</option>
+                    <option value="12">Clase 12</option>
+                    <option value="13">Clase 13</option>
+                    <option value="14">Clase 14</option>
+                </select>
+            </aside>
+            <section class="col-2">
+                <h1>Curso Desarrollo Web Full Stack</h1>
+                <h3>TRACK "FRONT END": HTML5 - CSS - JAVASCRIPT.</h3>
+                <iframe id="nroclase" src="https://www.youtube.com/embed/bJXkFF9MkIU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>Clase</iframe>
+            </section>
+            <section class="col-3">
+                <h2>Más información</h2>
+                <p id="detalle_clase">Clase 1. En esta primera clase haremos una introduccíón y comentaremos de qué se trata ser un programador full stack, veremos el temario que vamos a recorrer a lo largo del curso.</p>
+                <a id="link_material" href="https://docs.google.com/presentation/d/1EOeAkufZOIaCh_b3YV2sMbmASvHpnIGZ-NCuYT97UZ8/edit?usp=sharing" target="_blank">Link al material de lectura. #Clase 1.</a>
+            </section>
+        </div>    
     </main>
-    <footer>
-        <br>
-        <br>
-        <a href="https://twitter.com/?lang=es"><i class="fab fa-twitter"></i></a>
-        <a href="https://es-la.facebook.com/"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
-        <br>
-        <p>Derechos Reservados 2020</p>
-        <p><strong>Te esperamos si deseas acercarte a nuestras oficinas</strong></p>
-        <br>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.2008237440696!2d-58.371882684813926!3d-34.599082980460636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a3353362882a0f%3A0xd0c2b7f66748b42b!2sEdificio%20Bouchard%20710%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1598894371183!5m2!1ses-419!2sar" width="300" height="auto" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-        <br>
+    <footer class="pie">
+        <div class="pie-col-1">
+            <p><strong>Te esperamos si deseas acercarte a nuestras oficinas</strong></p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.2008237440696!2d-58.371882684813926!3d-34.599082980460636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a3353362882a0f%3A0xd0c2b7f66748b42b!2sEdificio%20Bouchard%20710%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1598894371183!5m2!1ses-419!2sar" width="auto" height="100px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+        <div class="pie-col-2">
+            <a href="https://twitter.com/?lang=es"><i class="fab fa-twitter"></i></a>
+            <a href="https://es-la.facebook.com/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+            <p>Derechos Reservados 2020</p>
+        </div>
     </footer>
 </body>
 </html>
