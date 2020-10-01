@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="js/main.js"></script>
+    <title>Learning2Code</title>
+</head>
+<body class="container-fluid">
+    <header class="row d-block encabezado my-0">
+        <div class="jumbotron text-center">
+            <p style="font-size:30px;">Aprendiendo a Programar</p>
+        </div>
+    </header>
+    <main class="row d-flex container-fluid my-0">
+        <nav class="bg-light navbar row container-fluid justify-content-md-center mx-auto p-3 my-0">
+            <div class="col-2"><a href="contenido.html">Home</a></div>
+            <div class="col-2"><a href="#">About</a></div>
+            <div class="col-2"><a href="#">more Videos & stuff</a></div>
+        </nav>
+        <div class="row my-5">
+            <aside class="col-sm col-md col bg-dark">
+                <div class="text-center">
+                    <label class="text-white d-block" style="font-size: larger; font-weight: 700;" for="clases">Elige la clase:</label>
+                    <select class="m-auto d-block btn btn-secondary dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" name="clases" onchange="elegir_clase2()">
+                        <option value="1">Clase 1</option>
+                        <option value="2">Clase 2</option>
+                        <option value="3">Clase 3</option>
+                        <option value="4">Clase 4</option>
+                        <option value="5">Clase 5</option>
+                        <option value="6">Clase 6</option>
+                        <option value="7">Clase 7</option>
+                        <option value="8">Clase 8</option>
+                        <option value="9">Clase 9</option>
+                        <option value="10">Clase 10</option>
+                        <option value="11">Clase 11</option>
+                        <option value="12">Clase 12</option>
+                        <option value="13">Clase 13</option>
+                        <option value="14">Clase 14</option>
+                    </select>
+                </div>  
+            </aside>
+            <section class="col-xs-10 col-sm-10 col-md-8 col-xl-8 flex-grow-1 border container-fluid">
+                <div class="row justify-content-md-center">
+                <h1>Curso Desarrollo Web Full Stack</h1>
+                </div>
+                <div class="row justify-content-md-center">
+                <h5>TRACK "FRONT END": HTML5 - CSS - JAVASCRIPT.</h3>
+                </div>
+                <div class="h-80 embed-responsive embed-responsive-16by9">
+                    <iframe id="nroclase" class="embed-responsive-item" src="https://www.youtube.com/embed/bJXkFF9MkIU" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>Clase</iframe>
+                </div>
+            </section>
+            <section class="bg-transparent border col-sm col-md col flex-grow-1">
+                <h2>Más información</h2>
+                <p id="detalle_clase">Clase 1. En esta primera clase haremos una introduccíón y comentaremos de qué se trata ser un programador full stack, veremos el temario que vamos a recorrer a lo largo del curso.</p>
+                <a id="link_material" href="https://docs.google.com/presentation/d/1EOeAkufZOIaCh_b3YV2sMbmASvHpnIGZ-NCuYT97UZ8/edit?usp=sharing" target="_blank">Link al material de lectura. #Clase 1.</a>
+            </section>
+        </div>    
+    </main>
+    <footer class="row justify-content-md-center pie">
+        <div class="pie-col-1">
+            <p>Derechos Reservados 2020 <a href="www.linkedin.com/in/javier-foster-agribiz" target="_blank"><i class="fab fa-linkedin"></i></a></p>
+        </div>
+    </footer>
+    <!--Bootstrap JS files-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
