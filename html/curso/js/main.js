@@ -79,6 +79,9 @@ var clases = [
 
 ]; 
 
+ 
+
+
 function elegir_clase2() {
     var data2 = parseInt(document.getElementById("dropdownMenuButton").value);
     document.getElementById("nroclase").src = clases[data2 - 1].video;
@@ -92,3 +95,4 @@ function elegir_clase2() {
         document.getElementById('link_biblio').className = "d-none";
     }
 }
+
