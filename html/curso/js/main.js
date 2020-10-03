@@ -79,7 +79,16 @@ var clases = [
 
 ]; 
 
- 
+var masvideos = [
+    {
+        video: "https://www.youtube.com/embed/-H_Sra2oVr0",
+        contenido: "Video 1. Algoritmos del curso CS50 - Harvard."
+    },
+    {
+        video: "https://www.youtube.com/embed/zOjov-2OZ0E",
+        contenido: "Video 2. Intro to Programming - freecodecamp.org."
+    },
+]; 
 
 
 function elegir_clase2() {
@@ -96,3 +105,8 @@ function elegir_clase2() {
     }
 }
 
+function elegir_masvideo() {
+    var data2 = parseInt(document.getElementById("dropdownmasvideos").value);
+    document.getElementById("masvideo").src = masvideos[data2 - 1].video;
+    document.getElementById("detalle_masvideo").innerHTML = masvideos[data2 - 1].contenido;
+}

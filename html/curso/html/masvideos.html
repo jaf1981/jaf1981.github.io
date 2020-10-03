@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
     <title>Learning2Code</title>
 </head>
 <body class="">
@@ -58,18 +58,26 @@
     <main class="">
         <div class="row container-fluid my-5">
             <aside class="col-sm col-md col bg-dark">
+                <div class="text-center">
+                    <label class="text-white d-block" style="font-size: larger; font-weight: 700;" for="clases">Elige un video:</label>
+                    <select class="m-auto d-block btn btn-secondary dropdown-toggle" id="dropdownmasvideos" data-toggle="dropdown" name="clases" onchange="elegir_masvideo()">
+                        <option value="1">Video 1</option>
+                        <option value="2">Video 2</option>
+                    </select>
+                </div>
             </aside>
             <section class="col-xs-10 col-sm-10 col-md-8 col-xl-8 flex-grow-1 border container-fluid">
                 <div class="row justify-content-md-center">
-                <h5>Quiénes somos.</h3>
+                <h5>MAS TEMAS INTERESANTES: HTML5 - CSS - JAVASCRIPT - PROGRAMMING.</h3>
                 </div>
-                <div class="h-80 ">
-                    <h4>No somos, soy yo, Javier Foster, tratando de hacer algo piola y útil a partir de los proyectos prácticos a completar a lo largo del curso de 'Codo a Codo' del Gobierno de la Ciudad Autónoma de Buenos Aires.</h4>
+                <div class="h-80 embed-responsive embed-responsive-16by9">
+                    <iframe id="masvideo" class="embed-responsive-item" src="https://www.youtube.com/embed/-H_Sra2oVr0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>Video</iframe>
                 </div>
             </section>
             <section class="bg-transparent border col-sm col-md col flex-grow-1">
                 <h2>Más información</h2>
-                <p id="detalle_clase">Soy un apasionado de la tecnología y hace un tiempo que me decidí a meterme en el mundo del desarrollo de Software y disfrutar cada paso del camino (sea hacia delante, atrás o al costado)😁.</p>
+                <p id="detalle_masvideo">Video 1. Algoritmos del curso CS50 - Harvard.</p>
+                </div>               
             </section>
         </div>    
     </main>
