@@ -76,7 +76,16 @@ var clases = [
         material: "https://docs.google.com/presentation/d/1MIflkZamU2rZ1trw5E5IRAtc9_F7JsqxTo_er9nsVpQ/edit?usp=sharing",
         apoyo: "https://drive.google.com/file/d/1UCBJuO0fmEZWD4ndPJDB_B5Yz24c5q7B/view?usp=sharing"
     },              
-
+    {
+        video : "https://www.youtube.com/embed/53YkQebUAAg",
+        contenido : "Clase 15. Javascript - Funciones, Arrow Functions, Scope.",
+        material: "https://docs.google.com/presentation/d/1-RnZ2Ss5QdsEj1BcIZIFuI7ZVT5DMymX4Ie1rwjDU7g/edit?usp=sharing",
+    },
+    {
+        video : "https://www.youtube.com/embed/HEq21dLDmWU",
+        contenido : "Clase 16. Javascript - Array, Strings.",
+        material: "https://docs.google.com/presentation/d/1weqqujWt28oWcOUmP9JL7xe8TZA0YGp0_QiO2x0VvWQ/edit?usp=sharing",
+    },    
 ]; 
 
 var masvideos = [
