@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="practica.js"></script>
+    <title>Práctica Javascript</title>
+</head>
+<body onload="rellenar_contenido()">
+    <header>
+        <h1 class="my-5 mx-1 text-center">Ejercicios Javascript</h1>
+    </header>
+    <main>
+    <div class="row container-fluid my-5">
+        <aside class="col-sm col-md col bg-dark">
+            <div class="text-center">
+                <label class="text-white d-block" style="font-size: larger; font-weight: 700;" for="practicas">Elige la Actividad Práctica:</label>
+                <select class="m-auto d-block btn btn-secondary dropdown-toggle" id="dropdownPractica" data-toggle="dropdown" name="practicas" onchange="rellenar_ejercicios()">
+                    <option value="26">Ejercicios Adicionales</option>
+                    <option value="20">Actividad Práctica 1</option>
+                    <option value="11">Actividad Práctica 2</option>
+                </select>
+            </div>
+        </aside>
+        <section class="col-xs-10 col-sm-10 col-md-8 col-xl-8 flex-grow-1 border container-fluid">
+            <div class="row justify-content-md-center">
+                <h5>Elige el ejercicio a consultar de cada lista desplegable para la actividad seleccionada previamente.</h3>
+                <label class="text-white d-block" style="font-size: larger; font-weight: 700;" for="clases">Elige la Actividad Práctica:</label>
+                <select class="m-auto d-block btn btn-secondary dropdown-toggle" id="dropdownEjercicios" data-toggle="dropdown" name="clases" onchange="rellenar_contenido()">
+                    <option value="1">Ejercicio 1</option>
+                    <option value="2">Ejercicio 2</option>
+                    <option value="3">Ejercicio 3</option>
+                    <option value="4">Ejercicio 4</option>
+                    <option value="5">Ejercicio 5</option>
+                    <option value="6">Ejercicio 6</option>
+                    <option value="7">Ejercicio 7</option>
+                    <option value="8">Ejercicio 8</option>
+                    <option value="9">Ejercicio 9</option>
+                    <option value="10">Ejercicio 10</option>
+                    <option value="11">Ejercicio 11</option>
+                    <option value="12">Ejercicio 12</option>
+                    <option value="13">Ejercicio 13</option>
+                    <option value="14">Ejercicio 14</option>
+                    <option value="15">Ejercicio 15</option>
+                    <option value="16">Ejercicio 16</option>
+                    <option value="17">Ejercicio 17</option>
+                    <option value="18">Ejercicio 18</option>
+                    <option value="19">Ejercicio 19</option>
+                    <option value="20">Ejercicio 20</option>
+                    <option value="21">Ejercicio 21</option>
+                    <option value="22">Ejercicio 22</option>
+                    <option value="23">Ejercicio 23</option>
+                    <option value="24">Ejercicio 24</option>
+                    <option value="25">Ejercicio 25</option>
+                    <option value="26">Ejercicio 26</option>
+                </select>
+            </div>
+            <h4>Enunciado</h4>
+            <p id="enunciado"></p>
+            <h4>Resolución - Código asociado al botón</h4>
+            <p id="codigo-ejercicio"></p>
+            <h4>Haz click en el botón para ejecutarlo</h4>
+            <button id="btn-ejercicio" class="btn-secondary" onclick="">Ejercicio 1</button>            
+        </section>
+    </div> 
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    </main>
+</body>
+</html>
