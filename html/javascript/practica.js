@@ -1,45 +1,45 @@
 var adicionales = [
     {
         enunciado: 'Escribe un programa de una sola línea que haga que aparezca en la pantalla un alert que diga “Hello World”.',
-        adicional_1: () => {
+        ej_1: () => {
             alert('Hello World')
             },
-        btn_ejercicio: 'adicionales[0].adicional_1()'
+        btn_ejercicio: 'adicionales[0].ej_1()'
     },
     {
         enunciado: 'Escribe un programa de una sola línea que escriba en la pantalla un texto que diga “Hello World” (document.write).',
-        adicional_2: () => {
+        ej_2: () => {
             document.write("Hello World");
             },
-        btn_ejercicio: 'adicionales[1].adicional_2()'    
+        btn_ejercicio: 'adicionales[1].ej_2()'    
     },
     {
         enunciado: 'Escribe un programa de una sola línea que escriba en la pantalla el resultado de sumar 3 + 5.',
-        adicional_3: () => {
+        ej_3: () => {
             document.write(`${3+5}`);
             },
-        btn_ejercicio: 'adicionales[2].adicional_3()'    
+        btn_ejercicio: 'adicionales[2].ej_3()'    
     },
     {
         enunciado: 'Escribe un programa de dos líneas que pida el nombre del usuario con un prompt y escriba un texto que diga “Hola nombreUsuario”',
-        adicional_4: () => {
+        ej_4: () => {
             let nombre_usuario = prompt("Ingrese su nombre");
             document.write(`Hola ${nombre_usuario}`);
             },
-        btn_ejercicio: 'adicionales[3].adicional_4()'    
+        btn_ejercicio: 'adicionales[3].ej_4()'    
     },
     {
         enunciado: 'Escribe un programa de tres líneas que pida un número, pida otro número y escriba el resultado de sumar estos dos números.',
-        adicional_5: () => {
+        ej_5: () => {
             let num1 = parseInt(prompt("Ingrese un número"));
             let num2 = parseInt(prompt("Ingrese otro número"));
             document.write(`El resultado de sumar ambos números es ${num1 + num2}`);
             },
-        btn_ejercicio: 'adicionales[4].adicional_5()'    
+        btn_ejercicio: 'adicionales[4].ej_5()'    
     },
     {
         enunciado: 'Escribe un programa que pida dos números y escriba en la pantalla cual es el mayor.',
-        adicional_6: () => {
+        ej_6: () => {
             let num1 = parseInt(prompt("Ingrese un número"));
             let num2 = parseInt(prompt("Ingrese otro número"));
                 while (num2 == num1) {
@@ -47,11 +47,11 @@ var adicionales = [
                 }
             document.write(`El mayor de los números es ${num1>num2 ? num1 : num2}`);
             },
-        btn_ejercicio: 'adicionales[5].adicional_6()'    
+        btn_ejercicio: 'adicionales[5].ej_6()'    
     },
     {
         enunciado: 'Escribe un programa que pida 3 números y escriba en la pantalla el mayor de los tres.',
-        adicional_7: () => {
+        ej_7: () => {
             let nros = [];
             let num1 = parseInt(prompt("Ingrese un número"));
             nros.push(num1);
@@ -72,19 +72,19 @@ var adicionales = [
             )
             document.write(`El mayor de los tres números es ${max}`);
             },
-        btn_ejercicio: 'adicionales[6].adicional_7()'    
+        btn_ejercicio: 'adicionales[6].ej_7()'    
     },
     {
         enunciado: 'Escribe un programa que pida un número y diga si es divisible por 2.',
-        adicional_8: () => {
+        ej_8: () => {
             let num1 = parseInt(prompt("Ingrese un número"));
             document.write(`El número ${num1} ${num1 % 2 == 0 ? 'si' : 'no'} es divisible por 2.`);
             },
-        btn_ejercicio: 'adicionales[7].adicional_8()'    
+        btn_ejercicio: 'adicionales[7].ej_8()'    
     },
     {
         enunciado: 'Escribe un programa que pida una frase y escriba cuantas veces aparece la letra "a".',
-        adicional_9: () => {
+        ej_9: () => {
             let texto = prompt("Ingrese una frase");
             var cantidad = 0;
             for (let i = 0; i < texto.length; i++) {
@@ -95,11 +95,11 @@ var adicionales = [
             }
             document.write(`La letra a aparece ${cantidad} veces en la frase ingresada.`);
             },
-        btn_ejercicio: 'adicionales[8].adicional_9()'    
+        btn_ejercicio: 'adicionales[8].ej_9()'    
     },
     {
         enunciado: 'Escribe un programa que pida una frase y escriba las vocales que aparecen.',
-        adicional_10: () => {
+        ej_10: () => {
             let texto = prompt("Ingrese una frase");
             var vocales = ['a', 'e', 'i','o','u'];
             var vocales_encontradas = [];
@@ -112,11 +112,11 @@ var adicionales = [
             }
             document.write(`En la palabra ingresada aparecen las siguientes vocales ${vocales_encontradas}.`);
             },
-        btn_ejercicio: 'adicionales[9].adicional_10()'    
+        btn_ejercicio: 'adicionales[9].ej_10()'    
     },
     {
         enunciado: 'Escribe un programa que pida una frase y escriba cuántas de las letras que tiene son vocales.',
-        adicional_11: () => {
+        ej_11: () => {
             let texto = prompt("Ingrese una frase");
             var vocales = ['a', 'e', 'i','o','u'];
             var cantidad = 0;
@@ -129,11 +129,11 @@ var adicionales = [
             }
             document.write(`En la palabra ingresada hay ${cantidad} vocales.`);
             },
-        btn_ejercicio: 'adicionales[10].adicional_11()'    
+        btn_ejercicio: 'adicionales[10].ej_11()'    
     },
     {
         enunciado: 'Escribe un programa que pida una frase y escriba cuántas veces aparecen cada una de las vocales.',
-        adicional_12: () => {
+        ej_12: () => {
             let texto = prompt("Ingrese una frase");
             var vocales = ['a', 'e', 'i','o','u'];
             var cantidad = [0,0,0,0,0];
@@ -162,19 +162,19 @@ var adicionales = [
              ${cantidad[4]} vocales 'u'
             .`);
             },
-        btn_ejercicio: 'adicionales[11].adicional_12()'    
+        btn_ejercicio: 'adicionales[11].ej_12()'    
     },
     {
         enunciado: 'Escribe un programa que pida un número y nos diga si es divisible por 2, 3, 5 o 7 (sólo hay que comprobar si lo es por uno de los cuatro).',
-        adicional_13: () => {
+        ej_13: () => {
             let num1 = parseInt(prompt("Ingrese un número para ver si es múltiplo de 5."));
             document.write(`El número ${num1} ingresado ${num1 % 5 == 0 ? 'si' : 'no'} es múltiplo de 5.`);
             },
-        btn_ejercicio: 'adicionales[12].adicional_13()'    
+        btn_ejercicio: 'adicionales[12].ej_13()'    
     },
     {
         enunciado: 'Añadir al ejercicio anterior que nos diga por cual de los cuatro es divisible (hay que decir todos por los que es divisible).',
-        adicional_14: () => {
+        ej_14: () => {
             let num1 = parseInt(prompt("Ingrese un número para ver si es múltiplo de 2, 3, 5 o 7."));
             var div2 = false; 
             var div3 = false; 
@@ -203,11 +203,11 @@ var adicionales = [
                     div7 == true ? document.write(`7 `) : '';
                 }
             },
-        btn_ejercicio: 'adicionales[13].adicional_14()'    
+        btn_ejercicio: 'adicionales[13].ej_14()'    
     },
     {
         enunciado: 'Escribir un programa que escriba en pantalla los divisores de un número dado.',
-        adicional_15: () => {
+        ej_15: () => {
             let num1 = parseInt(prompt("Ingrese un número para obtener sus divisores."));
             var divisores = [];
             for (i = 1; i < num1 / 2; i++) {
@@ -221,11 +221,11 @@ var adicionales = [
             divisores.push(num1);
             document.write(`Los divisores del número ${num1} son ${divisores}.`);
             },
-        btn_ejercicio: 'adicionales[14].adicional_15()'    
+        btn_ejercicio: 'adicionales[14].ej_15()'    
     },
     {
         enunciado: 'Escribir un programa que escriba en pantalla los divisores comunes de dos números dados.',
-        adicional_16: () => {
+        ej_16: () => {
             let num1 = parseInt(prompt("Ingrese un número"));
             let num2 = parseInt(prompt("Ingrese otro número"));
             var divisores_comunes = [];
@@ -256,11 +256,11 @@ var adicionales = [
             
             document.write(`Los divisores comunes del número ${num1} y el número ${num2} son ${divisores_comunes}.`);
             },
-        btn_ejercicio: 'adicionales[15].adicional_16()'    
+        btn_ejercicio: 'adicionales[15].ej_16()'    
     },
     {
         enunciado: 'Escribir un programa que nos diga si un número dado es primo (no es divisible por ninguno otro número que no sea él mismo o la unidad).',
-        adicional_17: () => {
+        ej_17: () => {
             let num1 = parseInt(prompt("Ingrese un número para saber si es un número primo."));
             var divisores = [];
             var ctrl = true;
@@ -275,11 +275,11 @@ var adicionales = [
                 document.write(`El número ${num1} ingresado NO es un número primo.`);
             }
             },
-        btn_ejercicio: 'adicionales[16].adicional_17()'    
+        btn_ejercicio: 'adicionales[16].ej_17()'    
     },
     {
         enunciado: 'Pide la edad y si es mayor de 18 años indica que ya puede conducir.',
-        adicional_18: () => {
+        ej_18: () => {
             let num1 = parseInt(prompt("Ingrese el número correspondiente a su edad."));
             if (num1 >= 18) {
                 document.write(`Ya tienes 18 años o más, puedes conducir.`);
@@ -287,11 +287,11 @@ var adicionales = [
                 document.write(`Debes tener al menos 18 años para conducir.`);
             }
             },
-        btn_ejercicio: 'adicionales[17].adicional_18()'    
+        btn_ejercicio: 'adicionales[17].ej_18()'    
     },
     {
         enunciado: 'Pide una nota (número). Muestra la calificación según la nota: ● 0-3: Muy deficiente ● 3-5: Insuficiente ● 5-6: Suficiente ● 6-7: Bien ● 7-9: Notable ● 9-10: Sobresaliente.',
-        adicional_19: () => {
+        ej_19: () => {
             let num1 = parseFloat(prompt("Ingrese el número correspondiente a su nota."));
             if (num1 <= 3) {
                 document.write(`Muy deficiente.`);
@@ -307,11 +307,11 @@ var adicionales = [
                 document.write(`Sobresaliente.`);
             }
         },
-        btn_ejercicio: 'adicionales[18].adicional_19()'    
+        btn_ejercicio: 'adicionales[18].ej_19()'    
     },
     {
         enunciado: 'Realiza un script que pida cadenas de texto hasta que se pulse “cancelar”. Al salir con “cancelar” deben mostrarse todas las cadenas concatenadas con un guión.',
-        adicional_20: () => {
+        ej_20: () => {
             let ctrl = true;
             let concat_str = "";
             while (ctrl == true) {
@@ -329,11 +329,11 @@ var adicionales = [
             };
             document.write(`${concat_str}`);
         },
-        btn_ejercicio: 'adicionales[19].adicional_20()'    
+        btn_ejercicio: 'adicionales[19].ej_20()'    
     },
     {
         enunciado: 'Realiza un script que pida números hasta que se pulse “cancelar”. Si no es un número deberá indicarse con un «alert» y seguir pidiendo. Al salir con “cancelar” deberá indicarse la suma total de los números introducidos.',
-        adicional_21: () => {
+        ej_21: () => {
             let ctrl = true;
             let suma = 0;
             let num = 0;
@@ -357,11 +357,11 @@ var adicionales = [
             };
             document.write(`La suma total de los números ingresados es de ${suma}`);
         },
-        btn_ejercicio: 'adicionales[20].adicional_21()'    
+        btn_ejercicio: 'adicionales[20].ej_21()'    
     },
     {
         enunciado: 'Realizar una página con un script que calcule el valor de la letra de un número de DNI (Documento nacional de indentidad). El algoritmo para calcular la letra del dni es el siguiente : ● El número debe ser entre 0 y 99999999 ● Debemos calcular el resto de la división entera entre el número y el número 23. ● Según el resultado, de 0 a 22, le corresponderá una letra de las siguientes: (T, R, W, A, G, M, Y, F, P, D, X, B, N, J, Z, S, Q, V, H, L, C, K, E) ● Si lo introducido no es un número deberá indicarse con un alert y volver a preguntar. ● Deberá de repetirse el proceso hasta que el usuario pulse «cancelar».',
-        adicional_22: () => {
+        ej_22: () => {
             let ctrl = true;
             let letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E']
             let nro = 0;
@@ -384,11 +384,11 @@ var adicionales = [
             alert(`La letra correspondiente al DNI ingresado es ${letras[resto]}`)
             };
         },
-        btn_ejercicio: 'adicionales[21].adicional_22()'    
+        btn_ejercicio: 'adicionales[21].ej_22()'    
     },
     {
         enunciado: 'Realiza un script que escriba una pirámide del 1 al 30 de la siguiente forma : 1 22 333 4444 55555 666666 …….',
-        adicional_23: () => {
+        ej_23: () => {
             for (let i = 1; i < 31; i++) {
                 var text = i.toString().repeat(i)
                 if (i == 1) {
@@ -399,11 +399,11 @@ var adicionales = [
             }
             document.body.innerText = resultado;
         },
-        btn_ejercicio: 'adicionales[22].adicional_23()'    
+        btn_ejercicio: 'adicionales[22].ej_23()'    
     },
     {
         enunciado: 'Haz un script que escriba una pirámide inversa de los números del 1 al número que indique el usuario de la siguiente forma : (suponiendo que indica 6). 666666 55555 4444 333 22 1',
-        adicional_24: () => {
+        ej_24: () => {
             num = prompt("Ingrese un número para la cantidad de pisos de una pirámide inversa:");
             if (num == null || num == "") {
                 return false;
@@ -426,11 +426,11 @@ var adicionales = [
             }
             document.body.innerText = resultado;
         },
-        btn_ejercicio: 'adicionales[23].adicional_24()'    
+        btn_ejercicio: 'adicionales[23].ej_24()'    
     },
     {
         enunciado: 'Crea script para generar pirámide siguiente con los números del 1 al número que indique el usuario (no mayor de 50).',
-        adicional_25: () => {
+        ej_25: () => {
             var largo = prompt("Ingrese la cantidad de pisos (máx. 50)");
             if (largo == null || largo == "") {
                 return false;
@@ -454,36 +454,163 @@ var adicionales = [
             }
             document.body.innerText = resultado;
         },
-        btn_ejercicio: 'adicionales[24].adicional_25()'    
+        btn_ejercicio: 'adicionales[24].ej_25()'    
     },
     {
         enunciado: 'Un script que escriba los números del 1 al 500, que indique cuales son múltiplos de 4 y de 9 y que cada 5 líneas muestre una línea horizontal. Por ejemplo : 1 2 3 4 (Múltiplo de 4) 5- ————————————————————- 6 7 8 (Múltiplo de 4) 9 (Múltiplo de 9) 10.',
-        adicional_26: () => {
+        ej_26: () => {
             for (let i = 1; i < 501; i++) {
                 document.write(`${i} ${i % 4 == 0 ? '(Múltiplo de 4)':''} ${i % 9 == 0 ? '(Múltiplo de 9)' : ''}`)
                 document.write(`${i % 5 == 0 ? '<hr>':'<br>'}`)
             }                
         },
-        btn_ejercicio: 'adicionales[25].adicional_26()'    
+        btn_ejercicio: 'adicionales[25].ej_26()'    
     },
 ];
 
 var practica1 = [
     {
-    enunciado: 'Practica 1.',
-    adicional_1: () => {
-        alert('Hello World')
+    enunciado: 'Realizar una función, a la que se le pase como parámetro un número N, y muestre por consola N veces, el siguiente mensaje: “Bienvenidos al curso Full Stack”.',
+    ej_1: () => {
+        let veces = prompt("Ingrese el parámetro para la función (nro de veces que se escribira el msj en Consola)");
+        if (veces == null || veces == "") {
+            return false;
+        }
+        while (isNaN(veces) == true || isFinite(veces) == false || veces < 0) {
+            alert("Lo ingresado no es un número o está fuera de los límites. Reintente por favor.")
+            veces = prompt("Ingrese el parámetro para la función (nro de veces que se escribira el msj en Consola)");
+            if (veces == null || veces == "") {
+                return false;
+            }
+        }
+        veces = parseInt(veces);
+        let arrow = (veces) => {
+                for (let i = 0; i < veces; i++)
+                {
+                    console.log('Bienvenidos al curso Full Stack');
+                }
+            }
+        arrow(veces);    
         },
-    btn_ejercicio: 'adicionales[0].adicional_1()'
+    btn_ejercicio: 'practica1[0].ej_1()'
     },
+    {
+        enunciado: 'Diseñar una función que tenga como parámetros dos números, y que calcule el máximo.',
+        ej_2: () => {
+            var numeros = [0,0];
+            for (let i = 0; i < 2; i++){
+                numeros[i] = prompt("Ingrese uno de los parámetros para la función (nro 1 de 2 para evaluar máximo)");
+                if (numeros[i] == null || numeros[i] == "") {
+                    return false;
+                }
+                while (isNaN(numeros[i]) == true || isFinite(numeros[i]) == false || numeros[i] < 0 || numeros[i] == numeros [i - 1]) {
+                    alert("Lo ingresado no es un número, está fuera de los límites o es igual al anterior. Reintente por favor.")
+                    numeros[i] = prompt("Ingrese uno de los parámetros para la función (nro para evaluar máximo)");
+                    if (numeros[i] == null || numeros[i] == "") {
+                        return false;
+                    }
+                }
+                numeros[i] = parseInt(numeros[i]);
+            }
+            let arrow = (a, b) => {
+                    let maximo = a > b ? a : b;
+                    alert(`El máximo es ${maximo}`);
+                    return maximo;
+                }
+            arrow(numeros[0], numeros[1]);    
+            },
+        btn_ejercicio: 'practica1[1].ej_2()'
+    },
+    {
+        enunciado: 'Crear una función que se llame promedio3, que reciba como parámetro tres valores y devuelva el promedio de los mismos.',
+        ej_3: () => {
+            var numeros = [0,0,0];
+            for (let i = 0; i < 3; i++){
+                numeros[i] = prompt("Ingrese uno de los parámetros para la función (1 nro de 3 para evaluar promedio)");
+                if (numeros[i] == null || numeros[i] == "") {
+                    return false;
+                }
+                while (isNaN(numeros[i]) == true || isFinite(numeros[i]) == false || numeros[i] < 0) {
+                    alert("Lo ingresado no es un número, está fuera de los límites o es igual al anterior. Reintente por favor.")
+                    numeros[i] = prompt("Ingrese uno de los parámetros para la función (nro para evaluar máximo)");
+                    if (numeros[i] == null || numeros[i] == "") {
+                        return false;
+                    }
+                }
+                numeros[i] = parseFloat(numeros[i]);
+            }
+            let arrow = (a, b, c) => {
+                    let promedio = parseFloat((a + b + c) / 3).toFixed(2);
+                    alert(`El promedio es ${promedio}`);
+                    return promedio;
+                }
+            arrow(numeros[0], numeros[1], numeros[2]);    
+            },
+        btn_ejercicio: 'practica1[2].ej_3()'
+    },
+    {
+        enunciado: 'Crear una función que lea notas hasta que ingrese -1 y devuelve el promedio de las notas leídas. ( aunque no se suele leer valores en una función).',
+        ej_4: () => {
+            var numeros = [];
+            var ctrl = true;
+            while (ctrl == true){
+                let input = prompt("Ingrese uno de los parámetros para la función (1 nro de 3 para evaluar promedio)");
+                if (input == null || input == "") {
+                    return false;
+                }
+                while (isNaN(input) == true || isFinite(input) == false || (input < 0 && input != -1)) {
+                    alert("Lo ingresado no es un número, está fuera de los límites o es igual al anterior. Reintente por favor.")
+                    input = prompt("Ingrese uno de los parámetros para la función (nro para evaluar máximo)");
+                    if (input == null || input == "") {
+                        return false;
+                    }
+                }
+                if (input == -1) {
+                    ctrl = false;
+                } else {
+                numeros.push(parseFloat(input));
+                }
+            }
+            if (numeros.length > 0) {
+            var suma = 0;
+            numeros.forEach(element => {
+                suma = suma + element;
+                console.log(suma)
+            })
+            var promedio = parseFloat(suma / numeros.length).toFixed(2);
+            alert(`El promedio de las notas ingresadas es ${promedio}.`)
+            return promedio;
+            } else {
+                alert(`No se ingresaron notas para obtener el promedio, este programa se cerrará.`)
+                console.warn("No se ingresaron datos, la ejecución se canceló.")
+            }
+        },
+        btn_ejercicio: 'practica1[3].ej_4()'
+    },
+    {
+        enunciado: 'Una función que se llame siguiente, que reciba como parámetro un valor entero, y devuelva el siguiente del número ingresado como parámetro.',
+        ej_5: () => {
+            var input = parseFloat(prompt("Ingrese un número entero."));
+            while ((Number(input) === input && input % 1 !== 0) || isNaN(input) === true) {
+                input = prompt("Ingrese un número entero, en lugar de uno decimal u otra cosa.");
+            }
+            input = parseFloat(input);
+            function siguiente(input) {
+                alert(`El número siguiente al ingresado es ${input + 1}.`)
+                return input + 1;
+            }
+            siguiente(input);
+        },
+        btn_ejercicio: 'practica1[4].ej_5()'
+    },              
 ];
 var practica2 = [
     {
         enunciado: 'Practica 2.',
-        adicional_1: () => {
+        ej_1: () => {
             alert('Hello World')
             },
-        btn_ejercicio: 'adicionales[0].adicional_1()'
+        btn_ejercicio: 'practica2[0].ej_1()'
     },    
 ];
 
@@ -521,7 +648,8 @@ function rellenar_contenido() {
     }
     var data = parseInt(document.getElementById("dropdownEjercicios").value);
         document.getElementById('enunciado').textContent = fuente[data - 1].enunciado;
-        document.getElementById('codigo-ejercicio').textContent = fuente[data - 1][`adicional_${data}`];
+        document.getElementById('codigo-ejercicio').textContent = fuente[data - 1][`ej_${data}`];
+        console.log(fuente[data - 1].btn_ejercicio);
         document.getElementById('btn-ejercicio').setAttribute('onclick', fuente[data - 1].btn_ejercicio);
         document.getElementById('btn-ejercicio').textContent = `Ejercicio ${data}`;
 }
