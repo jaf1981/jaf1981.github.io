@@ -589,20 +589,237 @@ var practica1 = [
     },
     {
         enunciado: 'Una función que se llame siguiente, que reciba como parámetro un valor entero, y devuelva el siguiente del número ingresado como parámetro.',
-        ej_5: () => {
-            var input = parseFloat(prompt("Ingrese un número entero."));
-            while ((Number(input) === input && input % 1 !== 0) || isNaN(input) === true) {
-                input = prompt("Ingrese un número entero, en lugar de uno decimal u otra cosa.");
+        ej_5: (input) => {
+            if (input === undefined) 
+            {
+                var input = parseFloat(prompt("Ingrese un número entero."));
+                while ((Number(input) === input && input % 1 !== 0) || isNaN(input) === true) {
+                    input = prompt("Ingrese un número entero, en lugar de uno decimal u otra cosa.");
+                }
+                input = parseFloat(input);
             }
-            input = parseFloat(input);
+            var sig;
             function siguiente(input) {
-                alert(`El número siguiente al ingresado es ${input + 1}.`)
-                return input + 1;
+                sig = input + 1;
+                // alert(`El número siguiente al ingresado es ${sig}.`)
+                return sig;
             }
             siguiente(input);
+            return sig;
         },
         btn_ejercicio: 'practica1[4].ej_5()'
-    },              
+    },
+    {
+        enunciado: 'Una función que se llame doble, que reciba como parámetro un valor, y devuelva el doble del número ingresado como parámetro.',
+        ej_6: (input) => {
+            if (input === undefined) 
+            {
+                var input = parseFloat(prompt("Ingrese un número para obtener el doble."));
+                while (isFinite(input) === false || isNaN(input) === true) {
+                    input = prompt("Ingrese un número, reintente.");
+                }
+                input = parseFloat(input);
+            }
+            var dob;    
+            function doble(input) {
+                dob = input * 2;
+                // alert(`El doble del número ingresado es ${dob}.`)
+                return dob;
+            }
+            doble(input);
+            return dob;
+        },
+        btn_ejercicio: 'practica1[5].ej_6()'
+    },
+    {
+        enunciado: 'Una función que se llame cuadrado, que reciba como parámetro un valor, y devuelva el valor del numero ingresado como parámetro elevado al cuadrado.',
+        ej_7: (input) => {
+            if (input === undefined) 
+            {
+                var input = parseFloat(prompt("Ingrese un número para elevar al cuadrado."));
+                while (isFinite(input) === false || isNaN(input) === true) {
+                    input = prompt("Ingrese un número, reintente.");
+                }
+                input = parseFloat(input);
+            }
+            var cuad;    
+            function cuadrado(input) {
+                cuad = input * input;
+                // alert(`El cuadrado del número ingresado es ${cuad}.`)
+                return cuad;
+            }
+            cuadrado(input);
+            return cuad;
+
+        },
+        btn_ejercicio: 'practica1[6].ej_7()'
+    },
+    {
+        enunciado: 'Una función que se denomine imprimirValores que dado un número por parámetro, imprima cual es el valor siguiente, el doble y el cuadrado. Usando las funciones definidas en los puntos 5) , 6) y 7) : siguiente, el doble y el cuadrado.',
+        ej_8: (input) => {
+            if (input === undefined) 
+            {
+                var input = parseFloat(prompt("Ingrese un número para obtener el siguiente, el doble y para elevar al cuadrado."));
+                while (isFinite(input) === false || isNaN(input) === true) {
+                    input = prompt("Ingrese un número, reintente.");
+                }
+                input = parseFloat(input);
+            }
+            var resultados;
+            function imprimir_val(input) {
+                var sig = practica1[4].ej_5(input);
+                var dob = practica1[5].ej_6(input);
+                var cuad = practica1[6].ej_7(input);
+                alert(`Resumen, del número ingresado su siguiente es ${sig}, su doble es ${dob} y su cuadrado es ${cuad}.`);
+                resultados = [sig, dob, cuad];
+                return resultados;
+            }
+            imprimir_val(input);
+            return resultados;
+        },
+        btn_ejercicio: 'practica1[7].ej_8()'
+    },
+    {
+        enunciado: 'Una función que se denomine imprimirElDobleDelSiguiente que dado un número por parámetro, imprima cual es el valor siguiente al el doble. Usando las funciones definidas en los puntos 5) , 6) : siguiente, el doble.',
+        ej_9: (input) => {
+            if (input === undefined) 
+            {
+                var input = parseFloat(prompt("Ingrese un número para obtener el doble de su siguiente."));
+                while (isFinite(input) === false || isNaN(input) === true) {
+                    input = prompt("Ingrese un número, reintente.");
+                }
+                input = parseFloat(input);
+            }
+            var resultados;
+            function imprimir_el_doble_del_siguiente(input) {
+                var sig = practica1[4].ej_5(input);
+                var dob = practica1[5].ej_6(sig);
+                alert(`Resumen, del número ingresado su siguiente es ${sig}, el doble de su siguiente es ${dob}.`);
+                resultados = [sig, dob];
+                return resultados;
+            }
+            imprimir_el_doble_del_siguiente(input);
+            return resultados;
+        },
+        btn_ejercicio: 'practica1[8].ej_9()'
+    },
+    {
+        enunciado: 'Una función que se denomine imprimirElDobleDelSiguienteAlCuadrado que dado un número por parámetro, imprima cual es el valor siguiente al el doble. Usando las funciones definidas en los puntos 5) , 6) y 7) : siguiente, el doble y el cuadrado.',
+        ej_10: (input) => {
+            if (input === undefined) 
+            {
+                var input = parseFloat(prompt("Ingrese un número para obtener el doble de su siguiente."));
+                while (isFinite(input) === false || isNaN(input) === true) {
+                    input = prompt("Ingrese un número, reintente.");
+                }
+                input = parseFloat(input);
+            }
+            var resultados;
+            function imprimir_el_cuadrado_del_doble_del_siguiente(input) {
+                var sig = practica1[4].ej_5(input);
+                var dob = practica1[5].ej_6(sig);
+                var cuad = practica1[6].ej_7(dob);
+                alert(`Resumen, del número ingresado su siguiente es ${sig}, el doble de su siguiente es ${dob} y el cuadrado del doble de su siguiente es ${cuad}.`);
+                resultados = [sig, dob, cuad];
+                return resultados;
+            }
+            imprimir_el_cuadrado_del_doble_del_siguiente(input);
+            return resultados;
+        },
+        btn_ejercicio: 'practica1[9].ej_10()'
+    },
+    {
+        enunciado: 'una función que dado la longitud de un lado de un cuadrado devuelva el perímetro.',
+        ej_11: (input) => {
+            if (input === undefined) 
+            {
+                var input = parseFloat(prompt("Ingrese la longitud de un lado del cuadrado para obtener el perímetro."));
+                while (isFinite(input) === false || isNaN(input) === true) {
+                    input = prompt("Ingrese un número, reintente.");
+                }
+                input = parseFloat(input);
+            }
+            var resultados;
+            function perimetro_cuadrado(input) {
+                var perimetro = input * 4;
+                alert(`Resumen, el perímetro del cuadrado es ${perimetro}.`);
+                resultados = perimetro;
+                return resultados;
+            }
+            perimetro_cuadrado(input);
+            return resultados;
+        },
+        btn_ejercicio: 'practica1[10].ej_11()'
+    },
+    {
+        enunciado: 'una función que dado la longitud de un lado de un cuadrado devuelva la superficie.',
+        ej_12: (input) => {
+            if (input === undefined) 
+            {
+                var input = parseFloat(prompt("Ingrese la longitud de un lado del cuadrado para obtener su superficie."));
+                while (isFinite(input) === false || isNaN(input) === true) {
+                    input = prompt("Ingrese un número, reintente.");
+                }
+                input = parseFloat(input);
+            }
+            var resultados;
+            function superficie_cuadrado(input) {
+                var superficie = input * input;
+                alert(`Resumen, la superficie del cuadrado es ${superficie}.`);
+                resultados = superficie;
+                return resultados;
+            }
+            superficie_cuadrado(input);
+            return resultados;
+        },
+        btn_ejercicio: 'practica1[11].ej_12()'
+    },
+    {
+        enunciado: 'una función que dado el radio de una círculo devuelva la circunferencia ( perimetro del circulo).',
+        ej_13: (input) => {
+            if (input === undefined) 
+            {
+                var input = parseFloat(prompt("Ingrese el radio del circulo para obtener la longitud de su circunferencia."));
+                while (isFinite(input) === false || isNaN(input) === true) {
+                    input = prompt("Ingrese un número, reintente.");
+                }
+                input = parseFloat(input);
+            }
+            var resultados;
+            function long_circunf_circulo(input) {
+                var long_circunf = parseFloat(2 * Math.PI * input).toFixed(2);
+                alert(`Resumen, la longitud de la circunferencia de este círculo es ${long_circunf}.`);
+                resultados = long_circunf;
+                return resultados;
+            }
+            long_circunf_circulo(input);
+            return resultados;
+        },
+        btn_ejercicio: 'practica1[12].ej_13()'
+    },
+    {
+        enunciado: 'una función que dado el radio de una círculo devuelva el area del circulo.',
+        ej_14: (input) => {
+            if (input === undefined) 
+            {
+                var input = parseFloat(prompt("Ingrese el radio del circulo para obtener su superficie."));
+                while (isFinite(input) === false || isNaN(input) === true) {
+                    input = prompt("Ingrese un número, reintente.");
+                }
+                input = parseFloat(input);
+            }
+            var resultados;
+            function superficie_circulo(input) {
+                var superficie = parseFloat(Math.PI * input * input).toFixed(2);
+                alert(`Resumen, la superficie de este círculo es ${superficie}.`);
+                resultados = superficie;
+                return resultados;
+            }
+            superficie_circulo(input);
+            return resultados;
+        },
+        btn_ejercicio: 'practica1[13].ej_14()'
+    },                                               
 ];
 var practica2 = [
     {
