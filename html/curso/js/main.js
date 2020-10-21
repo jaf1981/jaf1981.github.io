@@ -85,7 +85,22 @@ var clases = [
         video : "https://www.youtube.com/embed/HEq21dLDmWU",
         contenido : "Clase 16. Javascript - Array, Strings.",
         material: "https://docs.google.com/presentation/d/1weqqujWt28oWcOUmP9JL7xe8TZA0YGp0_QiO2x0VvWQ/edit?usp=sharing",
-    },    
+    },
+    {
+        video : "https://www.youtube.com/embed/lTFowA0S3LY",
+        contenido : "Clase 17. Javascript - Array, Strings, manipulación del DOM.",
+        material: "https://docs.google.com/presentation/d/1Xf05h9CVGcjZKIivRk2csmuMBeaIdDwnE5bhbQoNx8w/edit?usp=sharing",
+    },
+    {
+        video : "https://www.youtube.com/embed/tMuRd9SBKW0",
+        contenido : "Clase 18. Javascript - Manipulación del DOM, Objetos, For in, For of.",
+        material: "https://docs.google.com/presentation/d/1L3zMxBBnlzPO_BXGzDbw9EKXXOlZyf4hq5yWrk8tk7I/edit?usp=sharing",
+    },
+    {
+        video : "https://www.youtube.com/embed/sAG4ljmMueA",
+        contenido : "Clase 19 y 20. Javascript - Vue Js - Parte 1.",
+        material: "https://docs.google.com/presentation/d/1815rTgkiAw2VWRHtGlWWunzFXaPkVEWNliK-DJ7y_-U/edit?usp=sharing",
+    },                  
 ]; 
 
 var masvideos = [
