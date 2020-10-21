@@ -601,7 +601,6 @@ var practica1 = [
             var sig;
             function siguiente(input) {
                 sig = input + 1;
-                // alert(`El número siguiente al ingresado es ${sig}.`)
                 return sig;
             }
             siguiente(input);
@@ -623,7 +622,6 @@ var practica1 = [
             var dob;    
             function doble(input) {
                 dob = input * 2;
-                // alert(`El doble del número ingresado es ${dob}.`)
                 return dob;
             }
             doble(input);
@@ -645,7 +643,6 @@ var practica1 = [
             var cuad;    
             function cuadrado(input) {
                 cuad = input * input;
-                // alert(`El cuadrado del número ingresado es ${cuad}.`)
                 return cuad;
             }
             cuadrado(input);
