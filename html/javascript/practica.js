@@ -819,16 +819,387 @@ var practica1 = [
             return resultados;
         },
         btn_ejercicio: 'practica1[13].ej_14()'
-    },                                               
+    },
+    {
+        enunciado: 'una función que dado un número de mes y me devuelva la cantidad de días de ese mes(suponiendo que no es un año bisiesto).',
+        ej_15: (input) => {
+            if (input === undefined) 
+            {
+                var input = parseInt(prompt("Ingrese el número de mes para obtener su cantidad de días."));
+                while (isFinite(input) === false || isNaN(input) === true) {
+                    input = prompt("Ingrese un número, reintente.");
+                }
+                input = parseInt(input);
+            }
+            var resultados;
+            function cant_dias(input) {
+                var diasmes = (new Date(2020, input, 0)).getDate();
+                alert(`El mes ingresado tiene ${diasmes} días.`);
+                resultados = diasmes;
+                return resultados;
+            }
+            cant_dias(input);
+            return resultados;
+        },
+        btn_ejercicio: 'practica1[14].ej_15()'
+    },
+    {
+        enunciado: 'Una función que reciba como parámetro un año y diga si ese año es bisiesto (googlear cuando un año es bisiesto).',
+        ej_16: (input) => {
+            if (input === undefined) 
+            {
+                var input = parseInt(prompt("Ingrese el número de año para saber si es bisiesto."));
+                while (isFinite(input) === false || isNaN(input) === true) {
+                    input = prompt("Ingrese un número, reintente.");
+                }
+                input = parseInt(input);
+            }
+            var resultados;
+            function es_bisiesto(input) {
+                var bisiesto = ((input % 4 === 0) && (input % 100 !== 0) || (input % 400 === 0));
+                alert(`El año ingresado ${bisiesto ? 'es' : 'no es'} bisiesto.`);
+                resultados = bisiesto;
+                return resultados;
+            }
+            es_bisiesto(input);
+            return resultados;
+        },
+        btn_ejercicio: 'practica1[15].ej_16()'
+    },
+    {
+        enunciado: 'una función que reciba el dia, mes y año y me devuelva la cantidad de días de ese mes.',
+        ej_17: () => {
+            var input = [];
+            var prompt_req = ['dia', 'mes', 'año'];
+            for (let i = 0; i < 3; i++) {            
+                input[i] = parseInt(prompt(`Ingrese el ${prompt_req[i]}`));
+                while (isFinite(input[i]) === false || isNaN(input[i]) === true) {
+                    input[i] = prompt(`Ingrese el ${prompt_req[i]}, en formato número, reintente.`);
+                }
+                input[i] = parseInt(input[i]);
+            }
+            var resultados;
+            function cant_dias_mes(input) {
+                var diasmes = (new Date(input[2], input[1], 0)).getDate();
+                alert(`El mes de la fecha ingresada tiene ${diasmes} días.`);
+                resultados = diasmes;
+                return resultados;
+            }
+            cant_dias_mes(input);
+            return resultados;
+        },
+        btn_ejercicio: 'practica1[16].ej_17()'
+    },
+    {
+        enunciado: 'una función que reciba dia, mes y año y devuelva el dia siguiente.',
+        ej_18: () => {
+            var input = [];
+            var prompt_req = ['dia', 'mes', 'año'];
+            for (let i = 0; i < 3; i++) {            
+                input[i] = parseInt(prompt(`Ingrese el ${prompt_req[i]}`));
+                while (isFinite(input[i]) === false || isNaN(input[i]) === true) {
+                    input[i] = prompt(`Ingrese el ${prompt_req[i]}, en formato número, reintente.`);
+                }
+                input[i] = parseInt(input[i]);
+            }
+            
+            function dia_sig(input) {
+                var diasig = new Date(input[2], input[1] - 1, input[0]);
+                diasig.setDate(diasig.getDate() + 1);
+                alert(`El día siguiente a la fecha ingresada es ${diasig.getDate() + "/" + (diasig.getMonth() + 1) + "/" + diasig.getFullYear()}`);
+            }
+            dia_sig(input);
+        },
+        btn_ejercicio: 'practica1[17].ej_18()'
+    },
+    {
+        enunciado: 'una función que reciba dia, mes y año y devuelva el dia anterior.',
+        ej_19: () => {
+            var input = [];
+            var prompt_req = ['dia', 'mes', 'año'];
+            for (let i = 0; i < 3; i++) {            
+                input[i] = parseInt(prompt(`Ingrese el ${prompt_req[i]}`));
+                while (isFinite(input[i]) === false || isNaN(input[i]) === true) {
+                    input[i] = prompt(`Ingrese el ${prompt_req[i]}, en formato número, reintente.`);
+                }
+                input[i] = parseInt(input[i]);
+            }
+            
+            function dia_ant(input) {
+                var dia_ant = new Date(input[2], input[1] - 1, input[0]);
+                dia_ant.setDate(dia_ant.getDate() - 1);
+                alert(`El día anterior a la fecha ingresada es ${dia_ant.getDate() + "/" + (dia_ant.getMonth() + 1) + "/" + dia_ant.getFullYear()}`);
+            }
+            dia_ant(input);
+        },
+        btn_ejercicio: 'practica1[18].ej_19()'
+    },
+    {
+        enunciado: 'una función que se llame ultimoDiaDelMes que reciba díia,mes y año y devuelva el último día del mes.',
+        ej_20: () => {
+            var input = [];
+            var prompt_req = ['dia', 'mes', 'año'];
+            for (let i = 0; i < 3; i++) {            
+                input[i] = parseInt(prompt(`Ingrese el ${prompt_req[i]}`));
+                while (isFinite(input[i]) === false || isNaN(input[i]) === true) {
+                    input[i] = prompt(`Ingrese el ${prompt_req[i]}, en formato número, reintente.`);
+                }
+                input[i] = parseInt(input[i]);
+            }
+            var resultados;
+            function ultimo_dia_del_mes(input) {
+                var diasmes = (new Date(input[2], input[1], 0)).getDate();
+                var dianombre = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado']
+                var dianumero = (new Date(input[2], input[1], 0)).getDay();
+                alert(`El último día del mes de la fecha ingresada es el día ${diasmes} y será un ${dianombre[dianumero]}.`);
+                resultados = [diasmes, dianombre[dianumero]];
+                return resultados;
+            }
+            ultimo_dia_del_mes(input);
+            return console.log(resultados);
+        },
+        btn_ejercicio: 'practica1[19].ej_20()'
+    },                                                                             
 ];
 var practica2 = [
     {
-        enunciado: 'Practica 2.',
+        enunciado: 'cree un array con todas las edades de los estudiantes de su clase. Itere el array utilizando un bucle while y luego imprima todas las edades en la consola.',
         ej_1: () => {
-            alert('Hello World')
+            var edades = [25,22,35,40,55,19,26,32];
+            var i = 0;
+                while (i < edades.length) {
+                    console.log(edades[i]);
+                    i++;
+                }
             },
         btn_ejercicio: 'practica2[0].ej_1()'
-    },    
+    },
+    {
+        enunciado: 'Al ejercicio 1 agregue un condicional dentro del ciclo while para imprimir solo números pares. Cambie el ciclo para usar un ciclo "for" en lugar de un ciclo "while".',
+        ej_2: () => {
+            var edades = [25,22,35,40,55,19,26,32];
+                for (let i = 0; i < edades.length; i++) 
+                {
+                    if (edades[i] % 2 === 0) 
+                    {
+                        console.log(edades[i]);
+                    }
+                }
+            },
+        btn_ejercicio: 'practica2[1].ej_2()'
+    },
+    {
+        enunciado: 'escriba una función que reciba un array como parámetro e imprima el número más bajo de la array en la consola.',
+        ej_3: (input) => {
+            if (input === undefined | Array.isArray(input) === false) 
+            {
+                var prompt_req = ['primer', 'segundo', 'tercer', 'cuarto', 'quinto'];
+                var input = []
+                for (let i = 0; i < 5; i++) {            
+                    input[i] = parseInt(prompt(`Ingrese 5 números para armar un array. Ahora ingrese el ${prompt_req[i]} valor:`));
+                    while (isFinite(input[i]) === false || isNaN(input[i]) === true) {
+                        input[i] = prompt(`Reintente. Ingrese 5 números para armar un array. Ahora ingrese el ${prompt_req[i]} valor:`);
+                    }
+                    input[i] = parseInt(input[i]);
+                }
+            }
+            var masbajo;
+            for (let i = 0; i < input.length; i++) 
+            {
+                if (i === 0) 
+                {
+                    masbajo = input[i];
+                } 
+                else if (input[i] < masbajo) 
+                {
+                    masbajo = input[i];
+                }
+            }
+            console.log(masbajo);
+            },
+        btn_ejercicio: 'practica2[2].ej_3()'
+    },
+    {
+        enunciado: 'escriba una función que reciba un array como parámetro e imprima el número más grande de la array en la consola.',
+        ej_4: (input) => {
+            if (input === undefined | Array.isArray(input) === false) 
+            {
+                var prompt_req = ['primer', 'segundo', 'tercer', 'cuarto', 'quinto'];
+                var input = []
+                for (let i = 0; i < 5; i++) {            
+                    input[i] = parseInt(prompt(`Ingrese 5 números para armar un array. Ahora ingrese el ${prompt_req[i]} valor:`));
+                    while (isFinite(input[i]) === false || isNaN(input[i]) === true) {
+                        input[i] = prompt(`Reintente. Ingrese 5 números para armar un array. Ahora ingrese el ${prompt_req[i]} valor:`);
+                    }
+                    input[i] = parseInt(input[i]);
+                }
+            }
+            var masalto;
+            for (let i = 0; i < input.length; i++) 
+            {
+                if (i === 0) 
+                {
+                    masalto = input[i];
+                } 
+                else if (input[i] > masalto) 
+                {
+                    masalto = input[i];
+                }
+            }
+            console.log(masalto);
+            },
+        btn_ejercicio: 'practica2[3].ej_4()'
+    },
+    {
+        enunciado: 'Escriba una función que reciba dos parámetros, una array y un índice. La función imprimirá el valor del elemento en la posición dada (basado en uno) en la consola. Por ejemplo, dada la siguiente array e índice, la función imprimirá "6". var array = [3,6,67,6,23,11,100,8,93,0,17,24,7,1,33,45,28,33,23,12,99,100]; var index = 1;',
+        ej_5: (inputarray, inputindex) => {
+            if (inputarray === undefined | Array.isArray(inputarray) === false) 
+            {
+                var prompt_req = ['primer', 'segundo', 'tercer', 'cuarto', 'quinto'];
+                var inputarray = []
+                for (let i = 0; i < 5; i++) {            
+                    inputarray[i] = parseInt(prompt(`Ingrese 5 números para armar un array. Ahora ingrese el ${prompt_req[i]} valor:`));
+                    while (isFinite(inputarray[i]) === false || isNaN(inputarray[i]) === true) {
+                        inputarray[i] = prompt(`Reintente. Ingrese 5 números para armar un array. Ahora ingrese el ${prompt_req[i]} valor:`);
+                    }
+                    inputarray[i] = parseInt(inputarray[i]);
+                }
+            }
+            if (inputindex === undefined) 
+            {           
+                inputindex = parseInt(prompt(`Ingrese un número del elemento a localizar en el array.`));
+                while (isFinite(inputindex) === false || isNaN(inputindex) === true) {
+                    inputindex = prompt(`Reintente. Ingrese un número del elemento a localizar en el array.`);
+                }
+                inputindex = parseInt(inputindex);
+            }
+            console.log(inputarray[inputindex]);
+            },
+        btn_ejercicio: 'practica2[4].ej_5()'
+    },
+    {
+        enunciado: 'Escriba una función que reciba una array y solo imprima los valores que se repiten. ● Por ejemplo, dada la siguiente array e índice, la función imprimirá "6,23,33,100". var array = [3,6,67,6,23,11,100,8,93,0,17,24,7,1,33,45,28,33,23,12,99,100];.',
+        ej_6: (input) => {
+            if (input === undefined | Array.isArray(input) === false) 
+            {
+                var prompt_req = ['primer', 'segundo', 'tercer', 'cuarto', 'quinto'];
+                var input = []
+                for (let i = 0; i < 5; i++) {            
+                    input[i] = parseInt(prompt(`Ingrese 5 números para armar un array. Ahora ingrese el ${prompt_req[i]} valor:`));
+                    while (isFinite(input[i]) === false || isNaN(input[i]) === true) {
+                        input[i] = prompt(`Reintente. Ingrese 5 números para armar un array. Ahora ingrese el ${prompt_req[i]} valor:`);
+                    }
+                    input[i] = parseInt(input[i]);
+                }
+            }
+            var repetidos = [];
+            for (let i = 0; i < input.length; i++) 
+            {
+                for (let j = 0; j < input.length - 1; j++) 
+                {
+                    if (i != j && (input[i] == input[j]) && (!repetidos.includes(input[i]))) {
+                        repetidos.push(input[i]);
+                    }
+                }
+            }
+            console.log(repetidos);
+            },
+        btn_ejercicio: 'practica2[5].ej_6()'
+    },
+    {
+        enunciado: 'escriba una función de JavaScript simple para unir todos los elementos de la siguiente array en una cadena. myColor = ["Red", "Green", "White", "Black"]; Debería ver lo siguiente en su consola: "Rojo", "Verde", "Blanco", "Negro".',
+        ej_7: () => {
+            var mi_color = ['Rojo', 'Verde', 'Blanco', 'Negro'];
+            var mi_color_str = '';
+            for (let i = 0; i < mi_color.length; i++) 
+            {
+                if (mi_color_str === '') 
+                {
+                    mi_color_str = `"${mi_color[i]}"`
+                } else {
+                mi_color_str = `${mi_color_str}, "${mi_color[i]}"`
+                }
+            }
+            console.log(mi_color_str);
+            },
+        btn_ejercicio: 'practica2[6].ej_7()'
+    },
+    {
+        enunciado: 'escriba una función de JavaScript que invierta un número. Por ejemplo, si x = 32443, la salida debería ser 34423.',
+        ej_8: () => {
+            var input = parseInt(prompt(`Ingrese un número para invertir.`));
+            while (isFinite(input) === false || isNaN(input) === true) {
+                input = prompt(`Reintente. Ingrese un número para invertir.`);
+            }
+            input = parseInt(input);
+            resultado = input.toString();
+            resultado = parseInt(resultado.split("").reverse().join(""));
+            console.log(resultado);
+            return resultado;
+            },
+        btn_ejercicio: 'practica2[7].ej_8()'
+    },
+    {
+        enunciado: 'escriba una función de JavaScript que devuelva una cadena en orden alfabético. Por ejemplo, si x = "webmaster", la salida debería ser "abeemrstw". La puntuación y los números no se pasan en la cadena.',
+        ej_9: () => {
+            var input = prompt(`Ingrese una cadena de texto para ordenarla en orden alfabético.`);
+            while (input === undefined || input === null) {
+                input = prompt(`Reintente. Ingrese una cadena de texto.`);
+            }
+            resultado = input.split(" ");
+            if (resultado.length === 1) {
+                resultado[0] = [...resultado[0]].sort((a, b) => a.localeCompare(b)).join("");
+            } else {
+                for (let i = 0; i < resultado.length; i++) 
+                {
+                    resultado[i] = [...resultado[i]].sort((a, b) => a.localeCompare(b)).join("");
+                }
+            }
+            resultado = resultado.join(" ");
+            console.log(resultado);
+            return resultado;
+            },
+        btn_ejercicio: 'practica2[8].ej_9()'
+    },
+    {
+        enunciado: 'escriba una función de JavaScript que convierta la primera letra de cada palabra a mayúsculas. Por ejemplo, si x = "prince of persia", la salida debería ser "Prince Of Persia".',
+        ej_10: () => {
+            var input = prompt(`Ingrese una cadena de texto para colocar en mayúscula la primera letra de cada palabra.`);
+            while (input === undefined || input === null) {
+                input = prompt(`Reintente. Ingrese una cadena de texto para colocar en mayúscula la primera letra de cada palabra.`);
+            }
+            resultado = input.split(" ");
+            for (let i = 0; i < resultado.length; i++) {
+                resultado[i] = resultado[i].replace(resultado[i][0], resultado[i][0].toUpperCase()) 
+            }
+            resultado = resultado.join(" ");
+            console.log(resultado);
+            return resultado;
+            },
+        btn_ejercicio: 'practica2[9].ej_10()'
+    },
+    {
+        enunciado: 'escriba una función de JavaScript que busque la palabra más larga de una frase. Por ejemplo, si x = "Tutorial de desarrollo web", el resultado debería ser "Desarrollo".',
+        ej_11: () => {
+            var input = prompt(`Ingrese una cadena de texto para buscar la palabra más larga dentro de ella.`);
+            while (input === undefined || input === null) {
+                input = prompt(`Reintente. Ingrese una cadena de texto para colocar en mayúscula la primera letra de cada palabra.`);
+            }
+            input = input.split(" ");
+            let maslarga = "";
+            for (let i = 0; i < input.length; i++) {
+                if (i === 0) {
+                    maslarga = input[i];
+                } else if (input[i].length > maslarga.length) {
+                    maslarga = input[i];
+                }
+            }
+            resultado = maslarga;
+            console.log(resultado);
+            return resultado;
+            },
+        btn_ejercicio: 'practica2[10].ej_11()'
+    },                                                  
 ];
 
 function rellenar_ejercicios() {
